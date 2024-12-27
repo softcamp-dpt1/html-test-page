@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>향상된 HTML5 테스트 페이지 (동적 컨트롤 포함)</title>
+    <style>
+      fieldset {
+        margin-bottom: 2em;
+      }
+
+      .control-panel {
+        border: 1px solid #ccc;
+        padding: 1em;
+        margin: 1em 0;
+        background: #f9f9f9;
+      }
+
+      label {
+        display: inline-block;
+        margin-right: 0.5em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="top" role="document">
+      <header>
+        <h1>향상된 HTML5 테스트 페이지</h1>
+        <p>
+          이 페이지는 다양한 HTML5 요소, 속성, 컴포넌트를 포괄적으로 테스트할 수
+          있도록 해줍니다. 특정 요소에 대한 동적 제어 장치를 해당 요소 바로
+          근처에 배치하여, 속성 변경 시 즉시 결과를 확인할 수 있습니다.
+        </p>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#text">텍스트 관련 요소</a>
+            <ul>
+              <li><a href="#text__headings">헤딩(Heading)</a></li>
+              <li><a href="#text__paragraphs">문단(Paragraphs)</a></li>
+              <li><a href="#text__lists">목록(Lists)</a></li>
+              <li><a href="#text__blockquotes">블록 인용(Blockquotes)</a></li>
+              <li><a href="#text__details">Details / Summary</a></li>
+              <li><a href="#text__address">Address</a></li>
+              <li><a href="#text__hr">수평선(Horizontal rules)</a></li>
+              <li><a href="#text__tables">표(Tabular data)</a></li>
+              <li><a href="#text__code">코드(Code)</a></li>
+              <li><a href="#text__inline">인라인 요소(Inline elements)</a></li>
+              <li><a href="#text__comments">HTML 주석(Comments)</a></li>
+              <li><a href="#text__ruby">루비 문자(Ruby Text)</a></li>
+              <li><a href="#text__bdi_bdo">BDI/BDO</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#embedded">임베디드 콘텐츠</a>
+            <ul>
+              <li><a href="#embedded__images">이미지(Images)</a></li>
+              <li>
+                <a href="#embedded__bgimages">배경 이미지(Background images)</a>
+              </li>
+              <li><a href="#embedded__audio">오디오(Audio)</a></li>
+              <li><a href="#embedded__video">비디오(Video)</a></li>
+              <li><a href="#embedded__canvas">캔버스(Canvas)</a></li>
+              <li><a href="#embedded__meter">미터(Meter)</a></li>
+              <li><a href="#embedded__progress">프로그레스(Progress)</a></li>
+              <li><a href="#embedded__svg">인라인 SVG</a></li>
+              <li><a href="#embedded__iframe">IFrame</a></li>
+              <li><a href="#embedded__embed">Embed</a></li>
+              <li><a href="#embedded__object">Object</a></li>
+              <li><a href="#embedded__shadowDom">Shadow DOM 테스트</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#forms">폼 요소(Form elements)</a>
+            <ul>
+              <li><a href="#forms__input">입력 필드(Input fields)</a></li>
+              <li><a href="#forms__select">셀렉트 메뉴(Select menus)</a></li>
+              <li><a href="#forms__checkbox">체크박스(Checkboxes)</a></li>
+              <li><a href="#forms__radio">라디오 버튼(Radio buttons)</a></li>
+              <li><a href="#forms__textareas">텍스트 영역(Textareas)</a></li>
+              <li><a href="#forms__html5">HTML5 입력 타입</a></li>
+              <li><a href="#forms__action">액션 버튼(Action buttons)</a></li>
+              <li><a href="#forms__output">출력(Output)</a></li>
+              <li><a href="#forms__fileupload">파일 업로드(File Upload)</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#interactive">인터랙티브 요소(Interactive Elements)</a>
+            <ul>
+              <li><a href="#interactive__dialog">다이얼로그(Dialog)</a></li>
+              <li><a href="#interactive__template">템플릿(Template)</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#printerTest">프린트 테스트</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <!-- 텍스트 섹션 -->
+        <section id="text">
+          <header>
+            <h1>텍스트</h1>
+          </header>
+          <article id="text__headings">
+            <header>
+              <h2>헤딩(Heading)</h2>
+            </header>
+            <div>
+              <h1>헤딩 1</h1>
+              <h2>헤딩 2</h2>
+              <h3>헤딩 3</h3>
+              <h4>헤딩 4</h4>
+              <h5>헤딩 5</h5>
+              <h6>헤딩 6</h6>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__paragraphs">
+            <header>
+              <h2>문단(Paragraphs)</h2>
+            </header>
+            <div>
+              <p>문단은 하나의 주제를 다루는 글의 단위를 의미합니다.</p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__blockquotes">
+            <header>
+              <h2>블록 인용(Blockquotes)</h2>
+            </header>
+            <div>
+              <blockquote>
+                <p>
+                  블록 인용은 긴 인용문을 본문과 구분하여 보여줄 때 사용합니다.
+                </p>
+                <cite><a href="#!">출처 미상</a></cite>
+              </blockquote>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__lists">
+            <header>
+              <h2>목록(Lists)</h2>
+            </header>
+            <div>
+              <h3>정의 목록(Definition list)</h3>
+              <dl>
+                <dt>용어</dt>
+                <dd>이 용어에 대한 정의입니다.</dd>
+              </dl>
+              <h3>순서 있는 목록(Ordered List)</h3>
+              <ol type="1">
+                <li>아이템 1</li>
+                <li>
+                  아이템 2
+                  <ol type="A">
+                    <li>A1 아이템</li>
+                  </ol>
+                </li>
+              </ol>
+              <h3>순서 없는 목록(Unordered List)</h3>
+              <ul>
+                <li>아이템 1</li>
+                <li>
+                  아이템 2
+                  <ul>
+                    <li>아이템 2-1</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="text__details">
+            <header>
+              <h2>Details / Summary</h2>
+            </header>
+            <details id="testDetails" open>
+              <summary>자세한 정보 펼치기</summary>
+              <p>open 속성으로 기본적으로 펼쳐져 있습니다.</p>
+            </details>
+            <!-- Details 동적 컨트롤 -->
+            <div class="control-panel">
+              <p>
+                <label
+                  ><input type="checkbox" id="detailsOpenToggle" /> details
+                  열기(open)</label
+                >
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="text__address">
+            <header>
+              <h2>Address</h2>
+            </header>
+            <address>
+              작성자: <a href="mailto:webmaster@example.com">woosub</a>.<br />
+              Example.com<br />
+              Box 564, Disneyland<br />
+              USA
+            </address>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__hr">
+            <header>
+              <h2>수평선(Horizontal rules)</h2>
+            </header>
+            <div>
+              <hr />
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__tables">
+            <header>
+              <h2>표(Tabular data)</h2>
+            </header>
+            <table>
+              <caption>
+                표 캡션
+              </caption>
+              <thead>
+                <tr>
+                  <th>헤딩 1</th>
+                  <th>헤딩 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>셀 1</td>
+                  <td>셀 2</td>
+                </tr>
+              </tbody>
+            </table>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__code">
+            <header>
+              <h2>코드(Code)</h2>
+            </header>
+            <div>
+              <p>
+                <strong>인라인 코드:</strong>
+                <code>&lt;div&gt;code&lt;/div&gt;</code>
+              </p>
+              <pre>
+P R E F O R M A T T E D  
+T E X T
+              </pre>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__inline">
+            <header>
+              <h2>인라인 요소(Inline elements)</h2>
+            </header>
+            <div>
+              <p>
+                <a href="https://mainmethod0126.github.io/"
+                  >이것은 신우섭의 도서관으로 이어지는 링크입니다</a
+                >.
+              </p>
+              <p>
+                <a
+                  href="https://blog.naver.com/PostList.nhn?blogId=yurangcorp&from=postList&categoryNo=15"
+                  >이것은 망그러진 곰 네이버 블로그로 이어지는 링크입니다</a
+                >.
+              </p>
+              <p>
+                <a
+                  href="https://mainmethod0126.github.io/html-test-page/contents/pdf/mycat.pdf"
+                  >이것은 mycat.pdf로 이어지는 링크입니다</a
+                >.
+              </p>
+              <p><strong>굵은 텍스트</strong>와 <em>강조 텍스트</em>.</p>
+              <p><mark>하이라이트된 텍스트</mark>.</p>
+              <p><abbr title="HyperText Markup Language">HTML</abbr> 축약어.</p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+          <article id="text__comments">
+            <header>
+              <h2>HTML 주석(Comments)</h2>
+            </header>
+            <div>
+              <p>
+                여기에 주석이 있습니다:
+                <!--이 주석은 표시되지 않아야 합니다-->
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="text__ruby">
+            <header>
+              <h2>루비 문자(Ruby Text)</h2>
+            </header>
+            <div>
+              <ruby>漢 <rt>hàn</rt></ruby>
+              <ruby>字 <rt>zì</rt></ruby>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="text__bdi_bdo">
+            <header>
+              <h2>BDI / BDO</h2>
+            </header>
+            <div>
+              <p>
+                BDI는 방향 격리를 제공합니다: <bdi>ABC</bdi> (RTL 문맥에서도
+                올바르게 표시)
+              </p>
+              <p>
+                BDO는 텍스트 방향을 재정의합니다:
+                <bdo dir="rtl">이 텍스트는 뒤집혀 보입니다.</bdo>
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+        </section>
+
+        <!-- Embedded Section -->
+        <section id="embedded">
+          <header>
+            <h2>임베디드 콘텐츠(Embedded content)</h2>
+          </header>
+
+          <article id="embedded__images">
+            <header>
+              <h2>이미지(Images)</h2>
+            </header>
+            <div>
+              <figure>
+                <img
+                  src="https://mainmethod0126.github.io/html-test-page/contents/image/woosub-github-profile.jpg"
+                  alt="신우섭"
+                  width="200"
+                  height="200"
+                />
+                <figcaption>건담과 신우섭</figcaption>
+              </figure>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__bgimages">
+            <header>
+              <h2>배경 이미지(Background images)</h2>
+            </header>
+            <div
+              style="
+                background-image: url('https://mainmethod0126.github.io/html-test-page/contents/image/windows-background.jpg');
+                width: 300px;
+                height: 300px;
+              "
+            ></div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__audio">
+            <header>
+              <h2>오디오(Audio)</h2>
+            </header>
+            <div>
+              <audio
+                controls
+                src="https://mainmethod0126.github.io/html-test-page/contents/audio/sunflower-street-drumloop-85bpm-163900.mp3"
+              >
+                브라우저가 audio 요소를 지원하지 않습니다.
+              </audio>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__video">
+            <header>
+              <h2>비디오(Video)</h2>
+            </header>
+            <div>
+              <video id="testVideo" controls width="320" height="240">
+                <source
+                  src="https://mainmethod0126.github.io/html-test-page/contents/video/12773042_3840_2160_24fps.mp4"
+                  type="video/mp4"
+                />
+                브라우저가 video 요소를 지원하지 않습니다.
+              </video>
+            </div>
+            <div class="control-panel">
+              <p>
+                <label
+                  ><input type="checkbox" id="videoControls" /> controls</label
+                >
+              </p>
+              <p>
+                <label
+                  ><input type="checkbox" id="videoAutoplay" /> autoplay</label
+                >
+              </p>
+              <p>
+                <label><input type="checkbox" id="videoLoop" /> loop</label>
+              </p>
+              <p>
+                <label><input type="checkbox" id="videoMuted" /> muted</label>
+              </p>
+              <p>
+                <label for="videoWidth">Width:</label>
+                <input
+                  type="number"
+                  id="videoWidth"
+                  value="320"
+                  min="100"
+                  max="800"
+                />
+              </p>
+              <p>
+                <label for="videoHeight">Height:</label>
+                <input
+                  type="number"
+                  id="videoHeight"
+                  value="240"
+                  min="100"
+                  max="600"
+                />
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__canvas">
+            <header>
+              <h2>캔버스(Canvas)</h2>
+            </header>
+            <div>
+              <canvas id="ballsCanvas" width="150" height="150"
+                >브라우저가 canvas를 지원하지 않습니다.</canvas
+              >
+            </div>
+            <div class="control-panel">
+              <p>
+                <button type="button" id="btnRunBalls">Balls 데모 시작</button>
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__meter">
+            <header>
+              <h2>미터(Meter)</h2>
+            </header>
+            <div>
+              <meter id="testMeter" value="2" min="0" max="10">2 / 10</meter>
+            </div>
+            <div class="control-panel">
+              <p>
+                <label for="meterMin">Min:</label>
+                <input type="number" id="meterMin" value="0" />
+                <label for="meterMax">Max:</label>
+                <input type="number" id="meterMax" value="10" />
+                <label for="meterVal">Value:</label>
+                <input type="number" id="meterVal" value="2" />
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__progress">
+            <header>
+              <h2>프로그레스(Progress)</h2>
+            </header>
+            <div>
+              <progress id="testProgress" value="70" max="100">70%</progress>
+            </div>
+            <div class="control-panel">
+              <p>
+                <label for="progressMax">Max:</label>
+                <input type="number" id="progressMax" value="100" />
+                <label for="progressVal">Value:</label>
+                <input type="number" id="progressVal" value="70" />
+              </p>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__svg">
+            <header>
+              <h2>인라인 SVG</h2>
+            </header>
+            <div>
+              <svg width="100px" height="100px" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50" fill="#1fa3ec"></circle>
+              </svg>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__iframe">
+            <header>
+              <h2>IFrame</h2>
+            </header>
+            <div>
+              <iframe
+                src="index.html"
+                width="1200"
+                height="600"
+                sandbox
+              ></iframe>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__embed">
+            <header>
+              <h2>Embed</h2>
+            </header>
+            <div>
+              <embed
+                src="https://mainmethod0126.github.io/html-test-page/contents/pdf/mycat.pdf"
+                width="1200"
+                height="600"
+                type="application/pdf"
+              />
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="embedded__object">
+            <header>
+              <h2>Object</h2>
+            </header>
+            <div>
+              <object
+                data="https://mainmethod0126.github.io/html-test-page/contents/pdf/mygundam.pdf"
+                type="application/pdf"
+                width="1200"
+                height="600"
+              >
+                <!-- 여기가 대체 콘텐츠(fallback)입니다.
+                     브라우저가 PDF를 표시하지 못할 경우 아래 내용이 표시됩니다. -->
+                <p>
+                  PDF 문서를 표시할 수 없습니다.
+                  <a
+                    href="https://mainmethod0126.github.io/html-test-page/contents/pdf/mygundam.pdf"
+                    download
+                    >여기</a
+                  >에서 PDF를 다운로드하세요.
+                </p>
+              </object>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <!-- Shadow DOM 테스트 -->
+          <article id="embedded__shadowDom">
+            <header>
+              <h2>Shadow DOM 테스트</h2>
+            </header>
+            <div>
+              <p>
+                아래 영역에 Shadow DOM이 동적으로 붙어 녹색 텍스트가 표시됩니다.
+              </p>
+              <!-- ShadowRoot가 attach될 호스트 요소 -->
+              <div id="shadowHost"></div>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+        </section>
+        <!-- 폼 섹션 -->
+        <section id="forms">
+          <header>
+            <h2>폼 요소(Form elements)</h2>
+          </header>
+          <form>
+            <fieldset id="forms__input">
+              <legend>입력 필드(Input fields)</legend>
+              <p>
+                <label for="input__text"
+                  >텍스트 입력(required, autofocus):</label
+                >
+                <input
+                  id="input__text"
+                  type="text"
+                  placeholder="텍스트 입력"
+                  required
+                  autofocus
+                />
+              </p>
+              <p>
+                <label for="input__password">비밀번호(pattern):</label>
+                <input
+                  id="input__password"
+                  type="password"
+                  placeholder="6자 이상"
+                  pattern=".{6,}"
+                />
+              </p>
+              <p>
+                <label for="input__email">이메일:</label>
+                <input
+                  id="input__email"
+                  type="email"
+                  placeholder="example@domain.com"
+                  required
+                />
+              </p>
+              <p>
+                <label for="input__url">URL:</label>
+                <input
+                  id="input__url"
+                  type="url"
+                  placeholder="https://example.com"
+                />
+              </p>
+              <p>
+                <label for="input__tel">전화번호:</label>
+                <input
+                  id="input__tel"
+                  type="tel"
+                  placeholder="010-1234-5678"
+                  pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                />
+              </p>
+              <p>
+                <label for="input__search">검색:</label>
+                <input
+                  id="input__search"
+                  type="search"
+                  placeholder="검색어를 입력하세요"
+                />
+              </p>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__select">
+              <legend>셀렉트 메뉴(Select menus)</legend>
+              <p>
+                <label for="testSelect">Select (size=3, multiple):</label>
+                <select id="testSelect" size="3" multiple>
+                  <optgroup label="Fruits">
+                    <option>Apple</option>
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Grape</option>
+                    <option>Orange</option>
+                    <option>Mango</option>
+                    <option>Strawberry</option>
+                  </optgroup>
+                </select>
+              </p>
+              <div class="control-panel">
+                <p>
+                  <label for="selectSize">Select size:</label>
+                  <input
+                    type="number"
+                    id="selectSize"
+                    name="selectSize"
+                    min="1"
+                    max="10"
+                    value="3"
+                  />
+                </p>
+                <p>
+                  <label
+                    ><input
+                      type="checkbox"
+                      id="selectMultiple"
+                      name="selectMultiple"
+                    />
+                    multiple</label
+                  >
+                </p>
+                <p>
+                  <label
+                    ><input
+                      type="checkbox"
+                      id="selectDisabled"
+                      name="selectDisabled"
+                    />
+                    disabled</label
+                  >
+                </p>
+                <p>
+                  <label for="selectAddOption">새로운 옵션 추가:</label>
+                  <input
+                    type="text"
+                    id="selectAddOption"
+                    placeholder="옵션 텍스트 입력"
+                  />
+                  <button type="button" id="btnAddOption">Add</button>
+                </p>
+                <p>
+                  <button type="button" id="btnRemoveLastOption">
+                    마지막 옵션 제거
+                  </button>
+                </p>
+              </div>
+              <p>
+                <label for="select_normal">일반 Select:</label>
+                <select id="select_normal">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                </select>
+              </p>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__checkbox">
+              <legend>체크박스(Checkboxes)</legend>
+              <ul>
+                <li>
+                  <label
+                    ><input name="checkbox" type="checkbox" checked /> 선택
+                    A</label
+                  >
+                </li>
+                <li>
+                  <label
+                    ><input name="checkbox" type="checkbox" /> 선택 B</label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__radio">
+              <legend>라디오 버튼(Radio buttons)</legend>
+              <ul>
+                <li>
+                  <label
+                    ><input name="radio" type="radio" checked /> 옵션 1</label
+                  >
+                </li>
+                <li>
+                  <label><input name="radio" type="radio" /> 옵션 2</label>
+                </li>
+              </ul>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__textareas">
+              <legend>텍스트 영역(Textareas)</legend>
+              <p>
+                <label for="textarea">Textarea</label>
+                <textarea
+                  id="textarea"
+                  rows="4"
+                  cols="48"
+                  placeholder="여기에 메시지를 입력하세요"
+                ></textarea>
+              </p>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__html5">
+              <legend>HTML5 입력 타입</legend>
+              <p>
+                <label for="ic">Color input</label>
+                <input type="color" id="ic" value="#000000" />
+              </p>
+              <p>
+                <label for="in">Number input (min=0, max=10, step=2):</label>
+                <input
+                  type="number"
+                  id="in"
+                  min="0"
+                  max="10"
+                  step="2"
+                  value="2"
+                />
+              </p>
+              <p>
+                <label for="ir">Range input</label>
+                <input type="range" id="ir" value="10" />
+              </p>
+              <p>
+                <label for="idd">Date input</label>
+                <input type="date" id="idd" value="1970-01-01" />
+              </p>
+              <p>
+                <label for="idm">Month input</label>
+                <input type="month" id="idm" value="1970-01" />
+              </p>
+              <p>
+                <label for="idw">Week input</label>
+                <input type="week" id="idw" value="1970-W01" />
+              </p>
+              <p>
+                <label for="idtl">Datetime-local input</label>
+                <input
+                  type="datetime-local"
+                  id="idtl"
+                  value="1970-01-01T00:00"
+                />
+              </p>
+              <p>
+                <label for="idl">Datalist</label>
+                <input type="text" id="idl" list="example-list" />
+                <datalist id="example-list">
+                  <option value="Example #1"></option>
+                  <option value="Example #2"></option>
+                  <option value="Example #3"></option>
+                </datalist>
+              </p>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__action">
+              <legend>액션 버튼(Action buttons)</legend>
+              <p>
+                <input type="submit" value="Submit" />
+                <span> - 폼 데이터를 제출합니다.</span>
+              </p>
+              <p>
+                <input type="button" value="Button" />
+                <span>
+                  - 아무런 기본 동작 없이 JavaScript로 동작을 정의할 수 있는
+                  일반 버튼입니다.</span
+                >
+              </p>
+              <p>
+                <input type="reset" value="Reset" />
+                <span> - 폼의 모든 입력값을 초기값으로 리셋합니다.</span>
+              </p>
+              <p>
+                <input type="submit" value="Disabled" disabled />
+                <span>
+                  - 비활성화된 제출 버튼으로, 클릭 시 아무런 동작도 하지
+                  않습니다.</span
+                >
+              </p>
+              <p>
+                <button type="submit">
+                  <img src="https://via.placeholder.com/16" alt="Submit Icon" />
+                  Submit
+                </button>
+                <span>
+                  - 폼 데이터를 제출합니다. 추가적인 HTML 요소(예: 아이콘,
+                  스타일링된 텍스트)를 포함할 수 있는 유연한 버튼입니다.
+                  기본적인 동작은 <code>&lt;input type="submit"&gt;</code>과
+                  동일합니다.
+                </span>
+              </p>
+              <button type="button">
+                <img src="https://via.placeholder.com/16" alt="Button Icon" />
+                Button Only
+              </button>
+              <span>
+                - 기본 동작이 없으며, JavaScript로 동작을 정의할 수 있는 유연한
+                일반 버튼입니다.
+                <code>&lt;input type="button"&gt;</code>과 동일하지만, HTML
+                요소를 포함할 수 있어 스타일링이 더 용이합니다.
+              </span>
+              <p>
+                <button type="reset">
+                  <img src="https://via.placeholder.com/16" alt="Reset Icon" />
+                  Reset
+                </button>
+                <span>
+                  - 폼의 모든 입력값을 초기값으로 리셋합니다. 추가적인
+                  스타일링이나 HTML 요소를 포함할 수 있습니다. 기본적인 동작은
+                  <code>&lt;input type="reset"&gt;</code>과 동일합니다.
+                </span>
+              </p>
+              <p>
+                <button type="button" disabled>
+                  <img
+                    src="https://via.placeholder.com/16"
+                    alt="Disabled Icon"
+                  />
+                  Button Disabled
+                </button>
+                <span>
+                  - 비활성화된 일반 버튼으로, 클릭 시 아무런 동작도 하지
+                  않습니다.</span
+                >
+              </p>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__output">
+              <legend>출력(Output)</legend>
+              <p>
+                <label for="num1">숫자 1:</label>
+                <input type="number" id="num1" value="10" oninput="calcSum()" />
+              </p>
+              <p>
+                <label for="num2">숫자 2:</label>
+                <input type="number" id="num2" value="5" oninput="calcSum()" />
+              </p>
+              <p>합계: <output id="result">15</output></p>
+              <script>
+                function calcSum() {
+                  const n1 =
+                    parseFloat(document.getElementById("num1").value) || 0;
+                  const n2 =
+                    parseFloat(document.getElementById("num2").value) || 0;
+                  document.getElementById("result").value = n1 + n2;
+                }
+              </script>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+
+            <fieldset id="forms__fileupload">
+              <legend>파일 업로드(File Upload)</legend>
+              <p>
+                <label for="fileInput">파일 선택:</label>
+                <input type="file" id="fileInput" />
+              </p>
+              <p>선택한 파일: <output id="fileNameOutput">없음</output></p>
+            </fieldset>
+            <p><a href="#top">[위로]</a></p>
+          </form>
+        </section>
+
+        <!-- Interactive Elements -->
+        <section id="interactive">
+          <header>
+            <h2>인터랙티브 요소(Interactive Elements)</h2>
+          </header>
+
+          <article id="interactive__dialog">
+            <header>
+              <h2>다이얼로그(Dialog)</h2>
+            </header>
+            <div>
+              <dialog id="myDialog">
+                <p>이것은 dialog 요소입니다.</p>
+                <form method="dialog">
+                  <button>Close</button>
+                </form>
+              </dialog>
+              <button onclick="document.getElementById('myDialog').showModal()">
+                다이얼로그 열기
+              </button>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+
+          <article id="interactive__template">
+            <header>
+              <h2>템플릿(Template)</h2>
+            </header>
+            <div>
+              <p>
+                &lt;template&gt; 내의 콘텐츠는 JS로 복제하기 전까지 표시되지
+                않습니다:
+              </p>
+              <template id="myTemplate">
+                <p>이것은 템플릿 콘텐츠</p>
+              </template>
+              <button
+                onclick="
+                const tpl = document.getElementById('myTemplate');
+                const clone = tpl.content.cloneNode(true);
+                document.getElementById('templateContainer').appendChild(clone);
+              "
+              >
+                템플릿 콘텐츠 복제
+              </button>
+              <div id="templateContainer"></div>
+            </div>
+            <footer>
+              <p><a href="#top">[위로]</a></p>
+            </footer>
+          </article>
+        </section>
+
+        <!-- (아래가 프린트 테스트 섹션 추가 부분) -->
+        <section id="printerTest">
+          <header>
+            <h2>프린트 테스트</h2>
+          </header>
+          <div>
+            <p>
+              아래 버튼을 클릭하면, 현재 페이지를 인쇄할 수 있는 브라우저 창이
+              열립니다.
+            </p>
+            <button type="button" onclick="window.print()">인쇄하기</button>
+          </div>
+          <footer>
+            <p><a href="#top">[위로]</a></p>
+          </footer>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          <a href="https://github.com/mainmethod0126/html-test-page">GitHub</a
+          >에서 코드 확인 가능.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Dynamic Select Controls
+      (function () {
+        const testSelect = document.getElementById("testSelect");
+        const selectSizeInput = document.getElementById("selectSize");
+        const selectMultipleCheckbox =
+          document.getElementById("selectMultiple");
+        const selectDisabledCheckbox =
+          document.getElementById("selectDisabled");
+        const selectAddOptionInput = document.getElementById("selectAddOption");
+        const btnAddOption = document.getElementById("btnAddOption");
+        const btnRemoveLastOption = document.getElementById(
+          "btnRemoveLastOption"
+        );
+
+        selectSizeInput.addEventListener("input", () => {
+          const newSize = parseInt(selectSizeInput.value, 10);
+          if (!isNaN(newSize) && newSize > 0) {
+            testSelect.size = newSize;
+          }
+        });
+
+        selectMultipleCheckbox.addEventListener("change", () => {
+          if (selectMultipleCheckbox.checked) {
+            testSelect.setAttribute("multiple", "");
+          } else {
+            testSelect.removeAttribute("multiple");
+          }
+        });
+
+        selectDisabledCheckbox.addEventListener("change", () => {
+          testSelect.disabled = selectDisabledCheckbox.checked;
+        });
+
+        btnAddOption.addEventListener("click", () => {
+          const val = selectAddOptionInput.value.trim();
+          if (val.length > 0) {
+            const newOption = document.createElement("option");
+            newOption.textContent = val;
+            testSelect.appendChild(newOption);
+            selectAddOptionInput.value = "";
+          }
+        });
+
+        btnRemoveLastOption.addEventListener("click", () => {
+          if (testSelect.options.length > 0) {
+            testSelect.remove(testSelect.options.length - 1);
+          }
+        });
+
+        // Initialize
+        testSelect.size = parseInt(selectSizeInput.value, 10);
+      })();
+
+      // Dynamic Video Controls
+      (function () {
+        const video = document.getElementById("testVideo");
+        if (!video) return;
+        const videoControls = document.getElementById("videoControls");
+        const videoAutoplay = document.getElementById("videoAutoplay");
+        const videoLoop = document.getElementById("videoLoop");
+        const videoMuted = document.getElementById("videoMuted");
+        const videoWidth = document.getElementById("videoWidth");
+        const videoHeight = document.getElementById("videoHeight");
+
+        function updateVideoAttributes() {
+          video.controls = videoControls && videoControls.checked;
+          video.autoplay = videoAutoplay && videoAutoplay.checked;
+          video.loop = videoLoop && videoLoop.checked;
+          video.muted = videoMuted && videoMuted.checked;
+          video.width = parseInt(videoWidth.value, 10) || 320;
+          video.height = parseInt(videoHeight.value, 10) || 240;
+        }
+
+        if (videoControls) {
+          [
+            videoControls,
+            videoAutoplay,
+            videoLoop,
+            videoMuted,
+            videoWidth,
+            videoHeight,
+          ].forEach((el) => {
+            el.addEventListener("change", updateVideoAttributes);
+            el.addEventListener("input", updateVideoAttributes);
+          });
+
+          updateVideoAttributes();
+        }
+      })();
+
+      // Dynamic Details Controls
+      (function () {
+        const detailsOpenToggle = document.getElementById("detailsOpenToggle");
+        const testDetails = document.getElementById("testDetails");
+
+        if (detailsOpenToggle && testDetails) {
+          detailsOpenToggle.addEventListener("change", () => {
+            if (detailsOpenToggle.checked) {
+              testDetails.setAttribute("open", "");
+            } else {
+              testDetails.removeAttribute("open");
+            }
+          });
+        }
+      })();
+
+      // Dynamic Meter Controls
+      (function () {
+        const meter = document.getElementById("testMeter");
+        const meterMin = document.getElementById("meterMin");
+        const meterMax = document.getElementById("meterMax");
+        const meterVal = document.getElementById("meterVal");
+        if (!meter) return;
+
+        function updateMeter() {
+          meter.min = parseFloat(meterMin.value) || 0;
+          meter.max = parseFloat(meterMax.value) || 10;
+          let val = parseFloat(meterVal.value);
+          if (isNaN(val)) val = meter.min;
+          meter.value = val;
+        }
+
+        [meterMin, meterMax, meterVal].forEach((el) => {
+          el.addEventListener("input", updateMeter);
+        });
+
+        updateMeter();
+      })();
+
+      // Dynamic Progress Controls
+      (function () {
+        const progress = document.getElementById("testProgress");
+        const progressMax = document.getElementById("progressMax");
+        const progressVal = document.getElementById("progressVal");
+        if (!progress) return;
+
+        function updateProgress() {
+          progress.max = parseFloat(progressMax.value) || 100;
+          let val = parseFloat(progressVal.value);
+          if (isNaN(val)) val = 0;
+          progress.value = val;
+        }
+
+        [progressMax, progressVal].forEach((el) => {
+          el.addEventListener("input", updateProgress);
+        });
+
+        updateProgress();
+      })();
+
+      // Balls Demo
+      (function () {
+        const canvas = document.getElementById("ballsCanvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        let animationId;
+
+        function runBallsDemo() {
+          const BALL_COUNT = 20;
+          let balls = [];
+
+          function createBalls() {
+            balls = [];
+            for (let i = 0; i < BALL_COUNT; i++) {
+              balls.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: 10 + Math.random() * 10,
+                vx: (Math.random() * 2 - 1) * 3,
+                vy: (Math.random() * 2 - 1) * 3,
+                color:
+                  "hsl(" + Math.floor(Math.random() * 360) + ", 100%, 50%)",
+              });
+            }
+          }
+
+          function drawBalls() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let b of balls) {
+              ctx.beginPath();
+              ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+              ctx.fillStyle = b.color;
+              ctx.fill();
+            }
+          }
+
+          function updateBalls() {
+            for (let b of balls) {
+              b.x += b.vx;
+              b.y += b.vy;
+
+              if (b.x - b.r < 0 || b.x + b.r > canvas.width) {
+                b.vx *= -1;
+              }
+              if (b.y - b.r < 0 || b.y + b.r > canvas.height) {
+                b.vy *= -1;
+              }
+            }
+          }
+
+          function animate() {
+            updateBalls();
+            drawBalls();
+            animationId = requestAnimationFrame(animate);
+          }
+
+          createBalls();
+          animate();
+        }
+
+        const btnRunBalls = document.getElementById("btnRunBalls");
+        if (btnRunBalls) {
+          btnRunBalls.addEventListener("click", () => {
+            if (animationId) {
+              cancelAnimationFrame(animationId);
+            }
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            runBallsDemo();
+          });
+        }
+      })();
+
+      // 파일 업로드 테스트 스크립트
+      (function () {
+        const fileInput = document.getElementById("fileInput");
+        const fileNameOutput = document.getElementById("fileNameOutput");
+
+        if (fileInput && fileNameOutput) {
+          fileInput.addEventListener("change", () => {
+            if (fileInput.files && fileInput.files.length > 0) {
+              fileNameOutput.textContent = fileInput.files[0].name;
+            } else {
+              fileNameOutput.textContent = "없음";
+            }
+          });
+        }
+      })();
+
+      // Shadow DOM 테스트
+      (function () {
+        const shadowHost = document.getElementById("shadowHost");
+        if (shadowHost) {
+          // mode: 'open'으로 하면 DevTools 등에서 Shadow DOM 구조 확인 가능
+          const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+          shadowRoot.innerHTML = `
+            <style>
+              p {
+                color: green;
+                font-weight: bold;
+              }
+            </style>
+            <p>이 텍스트는 Shadow DOM 내부에서 렌더링됩니다!</p>
+          `;
+        }
+      })();
+    </script>
+  </body>
+</html>

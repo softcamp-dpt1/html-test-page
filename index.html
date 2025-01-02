@@ -809,8 +809,53 @@ T E X T
             <fieldset id="forms__html5">
               <legend>HTML5 입력 타입</legend>
               <p>
+                <label for="it">text input</label>
+                <input type="text" id="it" />
+                <label for="itd">text input (with datalist)</label>
+                <input type="text" id="itd" list="itd-list" />
+                <datalist id="itd-list">
+                  <option value="Example #1"></option>
+                  <option value="Example #2"></option>
+                  <option value="Example #3"></option>
+                </datalist>
+              </p>
+              <p>
                 <label for="ic">Color input</label>
                 <input type="color" id="ic" value="#000000" />
+                <label for="icd">Color input (with datalist)</label>
+                <input type="color" id="icd" value="#000000" list="icd-list" />
+                <datalist id="icd-list">
+                  <option value="#800000"></option>
+                  <option value="#8B0000"></option>
+                  <option value="#A52A2A"></option>
+                  <option value="#DC143C"></option>
+                  <option value="#000000"></option>
+                  <option value="#0008B0"></option>
+                  <option value="#00AA2A"></option>
+                  <option value="#123456"></option>
+                  <option value="#533246"></option>
+                  <option value="#5BA"></option>
+                  <option value="#A03C"></option>
+                  <option value="#040"></option>
+                  <option value="#C30283"></option>
+                  <option value="#940231"></option>
+                  <option value="#045301"></option>
+                  <option value="#800000"></option>
+                  <option value="#8B0000"></option>
+                  <option value="#A52A2A"></option>
+                  <option value="#DC143C"></option>
+                  <option value="#000000"></option>
+                  <option value="#0008B0"></option>
+                  <option value="#00AA2A"></option>
+                  <option value="#123456"></option>
+                  <option value="#533246"></option>
+                  <option value="#5BA"></option>
+                  <option value="#A03C"></option>
+                  <option value="#040"></option>
+                  <option value="#C30283"></option>
+                  <option value="#940231"></option>
+                  <option value="#045301"></option>
+                </datalist>
               </p>
               <p>
                 <label for="in">Number input (min=0, max=10, step=2):</label>
@@ -825,19 +870,67 @@ T E X T
               </p>
               <p>
                 <label for="ir">Range input</label>
-                <input type="range" id="ir" value="10" />
+                <input type="range" min="0" max="100" id="ir" />
+                <label for="ird">Range input (with datalist)</label>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  id="ird"
+                  list="ird-list"
+                />
+                <datalist id="ird-list">
+                  <option value="0"></option>
+                  <option value="10"></option>
+                  <option value="20"></option>
+                  <option value="30"></option>
+                </datalist>
               </p>
               <p>
                 <label for="idd">Date input</label>
                 <input type="date" id="idd" value="1970-01-01" />
+                <label for="idd">Date input (with datalist)</label>
+                <input
+                  type="date"
+                  id="idd"
+                  value="1970-01-01"
+                  list="iddd-list"
+                />
+                <datalist id="iddd-list">
+                  <option value="1970-01-01"></option>
+                  <option value="1970-01-10"></option>
+                  <option value="1970-01-15"></option>
+                  <option value="1970-01-30"></option>
+                </datalist>
               </p>
               <p>
                 <label for="idm">Month input</label>
                 <input type="month" id="idm" value="1970-01" />
+                <label for="idmd">Month input (with datalist)</label>
+                <input
+                  type="month"
+                  id="idmd"
+                  value="1970-01"
+                  list="idmd-list"
+                />
+                <datalist id="idmd-list">
+                  <option value="1970-01"></option>
+                  <option value="1970-03"></option>
+                  <option value="1970-04"></option>
+                  <option value="1970-05"></option>
+                </datalist>
               </p>
               <p>
                 <label for="idw">Week input</label>
                 <input type="week" id="idw" value="1970-W01" />
+                <label for="idwd">Week input (with datalist)</label>
+                <input type="week" id="idwd" value="1970-W01" list="idwd-list" />
+                <datalist id="idwd-list">
+                  <option value="1970-W03"></option>
+                  <option value="1970-W05"></option>
+                  <option value="1970-W06"></option>
+                  <option value="1970-W07"></option>
+                </datalist>
               </p>
               <p>
                 <label for="idtl">Datetime-local input</label>
@@ -846,14 +939,18 @@ T E X T
                   id="idtl"
                   value="1970-01-01T00:00"
                 />
-              </p>
-              <p>
-                <label for="idl">Datalist</label>
-                <input type="text" id="idl" list="example-list" />
-                <datalist id="example-list">
-                  <option value="Example #1"></option>
-                  <option value="Example #2"></option>
-                  <option value="Example #3"></option>
+                <label for="idtld">Datetime-local input (with datalist)</label>
+                <input
+                  type="datetime-local"
+                  id="idtld"
+                  value="1970-01-01T00:00"
+                  list="idtld-list"
+                />
+                <datalist id="idtld-list">
+                  <option value="1970-01-01T00:00"></option>
+                  <option value="1970-01-01T01:00"></option>
+                  <option value="2005-01-01T20:00"></option>
+                  <option value="2025-01-01T10:00"></option>
                 </datalist>
               </p>
             </fieldset>

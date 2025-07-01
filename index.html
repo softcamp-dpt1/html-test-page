@@ -225,6 +225,25 @@
         <li>
           <a href="#printerTest">프린트 테스트</a>
         </li>
+        <li>
+          <a href="#chromium-features">Chromium 기능 테스트</a>
+          <ul>
+            <li>
+              <a href="#chromium__view-transitions">View Transitions API</a>
+            </li>
+            <li>
+              <a href="#chromium__color-mix">CSS color-mix() 함수</a>
+            </li>
+            <li><a href="#chromium__webgpu">WebGPU API</a></li>
+            <li><a href="#chromium__popover">Popover API</a></li>
+            <li>
+              <a href="#chromium__light-dark">CSS light-dark() 함수</a>
+            </li>
+            <li>
+              <a href="#chromium__anchor-positioning">CSS Anchor Positioning</a>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
     <main>
@@ -1123,7 +1142,9 @@ T E X T
           </p>
 
           <div class="feature-section">
-            <h2>1. View Transitions API (Chrome 111+)</h2>
+            <h2 id="chromium__view-transitions">
+              1. View Transitions API (Chrome 111+)
+            </h2>
             <button class="test-button" id="viewTransitionsBtn">
               View Transitions 테스트
             </button>
@@ -1138,7 +1159,9 @@ T E X T
           </div>
 
           <div class="feature-section">
-            <h2>2. CSS color-mix() 함수 (Chrome 111+)</h2>
+            <h2 id="chromium__color-mix">
+              2. CSS color-mix() 함수 (Chrome 111+)
+            </h2>
             <button class="test-button" id="colorMixBtn">
               color-mix() 테스트
             </button>
@@ -1154,13 +1177,15 @@ T E X T
           </div>
 
           <div class="feature-section">
-            <h2>3. WebGPU API (Chrome 113+)</h2>
+            <h2 id="chromium__webgpu">3. WebGPU API (Chrome 113+)</h2>
             <button class="test-button" id="webGPUBtn">WebGPU 테스트</button>
             <div id="webGPUResult" class="result"></div>
           </div>
 
           <div class="feature-section">
-            <h2>4. Popover API (Chrome 114+, stable in 127+)</h2>
+            <h2 id="chromium__popover">
+              4. Popover API (Chrome 114+, stable in 127+)
+            </h2>
             <button class="test-button" id="popoverTargetBtn" popovertarget="my-popover">
               나를 클릭해서 팝오버 보기
             </button>
@@ -1174,7 +1199,9 @@ T E X T
           </div>
 
           <div class="feature-section">
-            <h2>5. CSS light-dark() 함수 (Chrome 121+)</h2>
+            <h2 id="chromium__light-dark">
+              5. CSS light-dark() 함수 (Chrome 121+)
+            </h2>
             <button class="test-button" id="lightDarkBtn">
               light-dark() 테스트
             </button>
@@ -1190,7 +1217,9 @@ T E X T
           </div>
 
           <div class="feature-section">
-            <h2>6. CSS Anchor Positioning (Chrome 125+)</h2>
+            <h2 id="chromium__anchor-positioning">
+              6. CSS Anchor Positioning (Chrome 125+)
+            </h2>
             <div id="anchorContainer">
               <div id="anchorElement">기준 요소</div>
               <div id="floatingElement">
